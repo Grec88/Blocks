@@ -79,35 +79,37 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-  }
-  
-  * {
+}
+
+* {
     box-sizing: inherit;
-    &::after{
-        box-sizing: inherit; 
-    }
-    &::before{
+
+    &::after {
         box-sizing: inherit;
     }
-  }
-  
-  body {
+
+    &::before {
+        box-sizing: inherit;
+    }
+}
+
+body {
     font-size: 1.6rem;
-  }
-  
-  img {
+}
+
+img {
     display: block;
     max-width: 100%;
     height: auto;
-  }
+}
