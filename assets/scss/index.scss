@@ -80,7 +80,7 @@
 // Media queries start
 
 
-@media (550px <=width <=1000px) {
+@media screen (550px <=width <=1000px) {
     .solutions {
         margin-bottom: 60px;
 
@@ -92,7 +92,7 @@
     }
 }
 
-@media (320px <=width <=549px) {
+@media screen (320px <=width <=549px) {
     .solutions {
         padding: 30px;
         margin-bottom: 60px;
