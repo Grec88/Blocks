@@ -1,12 +1,13 @@
 @import 'null-styles.scss';
 @import 'fonts.scss';
 
-@mixin fonts($fonfam, $fonstyle, $fonwei, $fonsize, $lineheight) {
+@mixin fonts($fonfam, $fonstyle, $fonwei, $fonsize, $lineheight, $color) {
     font-family: $fonfam;
     font-style: $fonstyle;
     font-weight: $fonwei;
     font-size: $fonsize;
     line-height: $lineheight;
+    color: $color;
 }
 
 %wrapp {
@@ -25,7 +26,7 @@
 
 .solutions__subtitle {
     background: linear-gradient(90deg, #4343FF 0%, #F96D6D 100%);
-    @include fonts('Open Sans', normal, 800, 1.2rem, 1.6rem);
+    @include fonts('Open Sans', normal, 800, 1.2rem, 1.6rem, none);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -36,23 +37,20 @@
 }
 
 .solutions__title {
-    @include fonts('GalanoGrotesque-Medium', normal, 800, 4.6rem, 5.5rem);
+    @include fonts('GalanoGrotesque-Medium', normal, 800, 4.6rem, 5.5rem, #110C11);
     margin: 0 auto;
     max-width: 840px;
     text-align: center;
-    color: #110C11;
 }
 
 .solutions__card-title {
-    @include fonts('Open Sans', normal, 700, 1.7rem, 2.3rem);
+    @include fonts('Open Sans', normal, 700, 1.7rem, 2.3rem, #110C11);
     text-transform: uppercase;
-    color: #110C11;
     margin-bottom: 30px;
 }
 
 .solutions__card-desc {
-    @include fonts('Open Sans', normal, 400, 1.7rem, 2.6rem);
-    color: #5C5C5C;
+    @include fonts('Open Sans', normal, 400, 1.7rem, 2.6rem, #5C5C5C);
 }
 
 .solutions__wrapper {
@@ -77,30 +75,117 @@
 
 // Solution styles end
 
+
+// Conditions styles start
+
+.conditions {
+    padding: 60px 220px 60px 140px;
+    margin-bottom: 100px;
+    background: #FFFFFF;
+}
+
+.conditions__wrapper {
+    @extend %wrapp;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.conditions__cards {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+
+
+.conditions__title {
+    @include fonts('Open Sans', normal, 700, 3.6rem, 3.8rem, #56565A);
+    margin-bottom: 15px;
+}
+
+.conditions__cta-desc {
+    @include fonts('Open Sans', normal, 400, 1.6rem, 2.2rem, #56565A);
+    margin-bottom: 30px;
+}
+
+.conditions__cta-more {
+    @include fonts('Open Sans', normal, 600, 1.6rem, 2rem, #FFFFFF);
+    background: #0A467E;
+    padding: 12px 40px;
+    text-align: center;
+    max-width: 160px;
+}
+
+.conditions__card-title {
+    @include fonts('Open Sans', normal, 700, 1.8rem, 2.2rem, #56565A);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.conditions__card-desc {
+    @include fonts('Open Sans', normal, 400, 1.4rem, 1.9rem, #56565A);
+    text-align: center;
+}
+
+.conditions__card {
+    padding: 20px;
+    background: #F7F7F7;
+}
+
+.conditions__card-pic {
+    margin-bottom: 20px;
+}
+
+.conditions__cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.conditions__card-thumb {
+    margin: 0 auto;
+}
+
+// Conditions styles end
+
+
 // Media queries start
 
-
-@media only screen and (max-width: 1000pxpx) {
-    .solutions {
-        margin-bottom: 60px;
-
-    }
-
-    .solutions__title {
-        @include fonts('GalanoGrotesque-Medium', normal, 800, 2.3rem, 2.8rem);
+@media only screen and (min-width: 1000px) {
+    .conditions__card-lg {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
     }
 }
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 1000px) {
     .solutions {
-        padding:30px;
         margin-bottom: 60px;
 
     }
 
     .solutions__title {
-        @include fonts('GalanoGrotesque-Medium', normal, 800, 2.3rem, 2.8rem);
-        margin:0;
+        @include fonts('GalanoGrotesque-Medium', normal, 800, 2.3rem, 2.8rem, #110C11);
+    }
+
+    .conditions__cards {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    .solutions {
+        padding: 30px;
+        margin-bottom: 60px;
+
+    }
+
+    .solutions__title {
+        @include fonts('GalanoGrotesque-Medium', normal, 800, 2.3rem, 2.8rem, #110C11);
+        margin: 0;
     }
 
     .solutions__card-title {
@@ -115,6 +200,25 @@
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         gap: 10px;
     }
+
+    .conditions {
+        padding: 0;
+    }
+
+    .conditions__wrapper {
+        display: block;
+    }
+
+    .conditions__cta {
+        margin: 30px;
+    }
+
+    .conditions__cards {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+
 
 }
 
