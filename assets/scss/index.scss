@@ -1,3 +1,121 @@
-body{
-    background-color: aqua;
+@import 'null-styles.scss';
+@import 'fonts.scss';
+
+@mixin fonts($fonfam, $fonstyle, $fonwei, $fonsize, $lineheight) {
+    font-family: $fonfam;
+    font-style: $fonstyle;
+    font-weight: $fonwei;
+    font-size: $fonsize;
+    line-height: $lineheight;
 }
+
+%wrapp {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+// Solution styles start
+
+.solutions {
+    padding: 80px 130px;
+    margin-bottom: 130px;
+    background: #F9F9FA;
+}
+
+.solutions__subtitle {
+    background: linear-gradient(90deg, #4343FF 0%, #F96D6D 100%);
+    @include fonts('Open Sans', normal, 800, 1.2rem, 1.6rem);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.solutions__title {
+    @include fonts('GalanoGrotesque-Medium', normal, 800, 4.6rem, 5.5rem);
+    margin: 0 auto;
+    max-width: 840px;
+    text-align: center;
+    color: #110C11;
+}
+
+.solutions__card-title {
+    @include fonts('Open Sans', normal, 700, 1.7rem, 2.3rem);
+    text-transform: uppercase;
+    color: #110C11;
+    margin-bottom: 30px;
+}
+
+.solutions__card-desc {
+    @include fonts('Open Sans', normal, 400, 1.7rem, 2.6rem);
+    color: #5C5C5C;
+}
+
+.solutions__wrapper {
+    @extend %wrapp;
+}
+
+.solutions__caption {
+    margin-bottom: 100px;
+}
+
+.solutions__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+    gap: 40px;
+}
+
+.solutions__card {
+    padding: 20px;
+    background: #FFFFFF;
+}
+
+
+// Solution styles end
+
+// Media queries start
+
+
+@media only screen and (max-width: 1000pxpx) {
+    .solutions {
+        margin-bottom: 60px;
+
+    }
+
+    .solutions__title {
+        @include fonts('GalanoGrotesque-Medium', normal, 800, 2.3rem, 2.8rem);
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .solutions {
+        padding:30px;
+        margin-bottom: 60px;
+
+    }
+
+    .solutions__title {
+        @include fonts('GalanoGrotesque-Medium', normal, 800, 2.3rem, 2.8rem);
+        margin:0;
+    }
+
+    .solutions__card-title {
+        margin-bottom: 20px;
+    }
+
+    .solutions__caption {
+        margin-bottom: 30px;
+    }
+
+    .solutions__cards {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 10px;
+    }
+
+}
+
+// Media queries end
