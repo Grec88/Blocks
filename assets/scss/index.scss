@@ -100,6 +100,7 @@
 
     .solutions__title {
         @include fonts('GalanoGrotesque-Medium', normal, 800, 1.6rem, 2.4rem);
+        margin:0;
     }
 
     .solutions__card-title {
