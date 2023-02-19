@@ -100,17 +100,10 @@
 
     .solutions__title {
         @include fonts('GalanoGrotesque-Medium', normal, 800, 1.6rem, 2.4rem);
-        margin: 0 auto;
-        width: 260px;
     }
 
     .solutions__card-title {
-        @include fonts('Open Sans', normal, 700, 1.1rem, 1.2rem);
         margin-bottom: 20px;
-    }
-
-    .solutions__card-desc {
-        @include fonts('Open Sans', normal, 400, 1rem, 1.3rem);
     }
 
     .solutions__caption {
