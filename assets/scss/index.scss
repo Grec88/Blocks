@@ -154,12 +154,12 @@
 .calculator {
     padding: 60px 100px 20px 100px;
     background: url('/img/main-icon.jpg') no-repeat;
-    max-width: 1170px; 
-    margin:0 auto;
+    max-width: 1170px;
+    margin: 0 auto;
     margin-bottom: 160px;
 }
 
-.calculator__cta{
+.calculator__cta {
     margin-bottom: 40px;
 }
 
@@ -180,12 +180,12 @@
     margin-bottom: 30px;
 }
 
-.calculator__more{
+.calculator__more {
     @include fonts('Open Sans', normal, 400, 1.6rem, 2.2rem, #0A467E);
     background-color: #FFFFFF;
     text-align: center;
     padding: 10px 40px;
-    border:#fff;
+    border: #fff;
 }
 
 .calculator__footer {
@@ -196,6 +196,64 @@
 
 
 // Progress styles start
+.progress {
+    padding: 30px 0;
+    background: #F5F5F5;
+
+    .progress__wrapper {
+        margin: 0 auto;
+        padding: 20px 30px 20px 30px;
+        max-width: 370px;
+        border-radius: 5px;
+        background: #fff;
+
+        .progress__subtitle {
+            margin-bottom: 10px;
+            @include fonts('Open Sans', normal, 400, 1.4rem, 2rem, #515151);
+        }
+
+        .progress__title {
+            margin-bottom: 20px;
+            @include fonts('Open Sans', normal, 700, 1.8rem, 2.2rem, #061B36);
+        }
+
+        .progress__percent {
+            margin-bottom: 10px;
+            @include fonts('Open Sans', normal, 700, 1.6rem, 2rem, #77BB2F);
+        }
+
+        .progress__bar-wrap {
+            width: 100%;
+            height: 4px;
+            background: #EEF3F7;
+            margin-bottom: 20px;
+
+            .progress__bar {
+                background: #77BB2F;
+                width: 126px;
+                height: 4px;
+            }
+        }
+
+        .progress__homework-item {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            @include fonts('Open Sans', normal, 500, 1.4rem, 2rem, #061B36);
+
+            .progress__homework-icon {
+                margin-right: 10px;
+            }
+
+            .progress__homework-name {}
+
+            .progress__homework-count {
+                margin-left: auto;
+                @include fonts('Open Sans', normal, 400, 1.4rem, 2rem, #515151);
+            }
+        }
+    }
+}
 
 
 // Progress styles end
@@ -226,14 +284,14 @@
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 
-    .calculator{
+    .calculator {
         max-width: 690px;
-        padding:60px 30px 20px 30px;
+        padding: 60px 30px 20px 30px;
         background: url('/img/main-icon-2.jpg') no-repeat;
 
     }
 
-    .calculator__cta-title{
+    .calculator__cta-title {
         max-width: 470px;
     }
 
@@ -282,26 +340,27 @@
         grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     }
 
-    .calculator{
+    .calculator {
         max-width: 290px;
-        padding:30px;
-        background: url('/img/main-icon-3.jpg')  no-repeat;
+        padding: 30px;
+        background: url('/img/main-icon-3.jpg') no-repeat;
 
     }
 
-    .calculator__cta-title{
+    .calculator__cta-title {
         @include fonts('Open Sans', normal, 700, 2rem, 2.4rem, #fff);
         margin-bottom: 15px;
         max-width: 180px;
     }
-    .calculator__cta{
+
+    .calculator__cta {
         margin-bottom: 15px;
     }
 
     .calculator__cta-subtitle {
         @include fonts('Open Sans', normal, 600, 1.8rem, 2.2rem, #fff);
     }
-    
+
     .calculator__cta-desc {
         @include fonts('Open Sans', normal, 400, 1.5rem, 2rem, #fff);
         max-width: 230px;
